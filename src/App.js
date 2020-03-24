@@ -11,7 +11,9 @@ import uuid from "uuid/v4";
 //   { id: uuid(), charge: "credit card bill", amount: 1200 }
 // ];
 
-const initialExpenses = localStorage.getItem('expenses') ? JSON.parse(localStorage.getItem('expenses')) : []
+const initialExpenses = localStorage.getItem("expenses")
+  ? JSON.parse(localStorage.getItem("expenses"))
+  : [];
 
 function App() {
   // **************** State Values *************
@@ -36,8 +38,8 @@ function App() {
   //********Use Effect **********************
 
   useEffect(() => {
-    localStorage.setItem('expenses', JSON.stringify(expenses))
-  }, [expenses])
+    localStorage.setItem("expenses", JSON.stringify(expenses));
+  }, [expenses]);
 
   //******************** Functionality ********
 
